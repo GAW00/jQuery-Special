@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <script>
+            var a = 1; // 전역
+            {
+                var a = 2; // 지역
+                var b = 3; // 지역
+            }
+            console.log(a); // 지역 변수
+            console.log(b); // 지역 변수
+
+            
+            let aa = 1; // 전역
+            {
+                let aa = 2; // 지역
+                let bb = 3; // 지역
+            }
+            console.log(aa); // 전역
+            // console.log(bb); // 오류 발생 : bb는 지역변수이므로 참조 불가
+
+
+            const x = 1;
+            // x = 2; // 오류 발생 : Assignment to constant variable(const 타입은 재할당 불가)
+            // const x; // 오류 발생 : Identifier 'x' has already been declared(변수 x 이미 선언됨)
+            console.log(x);
+
+
+            const employee = {name:"hong", age:24};
+            // employee{}; // 오류발생
+            employee.name = "kim"; // 속성의 값은 변경 가능
+            console.log(employee);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
